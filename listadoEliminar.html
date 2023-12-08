@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Socios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Baja de Socios</h1>
+    <h3>Be Strong</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>DNI</th>
+                <th>Apellido</th>
+                <th>Nombre</th>
+                <th align="right">Edad</th>
+                <th>Plan</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="socio in socios">
+                <td>{{ socio.dni }}</td>
+                <td>{{ socio.apellido }}</td>
+                <td>{{ socio.nombre }}</td>
+                <td align="right">{{ socio.edad }}</td>
+                <td><button     
+@click="eliminarSocios(socio.codigo)">Eliminar</button></td>
+            </tr>
+        </tbody>
+    </table>
+<template>
+    <div class="contenedor-centrado">
+      <a href="index.html">Menu principal</a>
+    </div>
+  </template>
+<script src="https://unpkg.com/vue@next"></script>
+<script src="listadoEliminar.js"></script>
+</body>
+</html>
+
+
+  
