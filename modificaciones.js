@@ -59,7 +59,7 @@ const app = Vue.createApp({
                 }
             })
             .then(data => {
-                alert('Producto actualizado correctamente.');
+                alert('Socio actualizado correctamente.');
                 this.limpiarFormulario();
             })
             .catch(error => {
