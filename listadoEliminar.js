@@ -23,7 +23,7 @@ const app = Vue.createApp({
                     alert('Error al obtener los socios.');
                 });
         },
-        eliminarSocio(dni) {
+        eliminar_socio(dni) {
             if (confirm('¿Estás seguro de que quieres eliminar este socio?')) {
                 fetch(URL + `socios/${dni}`, { method: 'DELETE' })
                     .then(response => {
