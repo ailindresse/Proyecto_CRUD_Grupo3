@@ -72,6 +72,7 @@ const app = Vue.createApp({
             this.apellido = '';
             this.nombre = '';
             this.edad = '';
+            this.plan = '';
             this.mostrarDatosSocio = false;
         }
     }    
