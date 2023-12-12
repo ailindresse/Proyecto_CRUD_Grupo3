@@ -2,6 +2,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #882020; /* Change background color */
+    color: white; /* Set text color to white */
 }
 
 .contenedor-centrado {
@@ -16,6 +17,7 @@ p {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
+    color: white; /* Set text color to white */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -27,7 +29,7 @@ form {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
-    background-color: white;
+    background-color: black; /* Change form background color to black */
     border: 1px solid lightslategray;
     border-radius: 5px;
 }
@@ -36,7 +38,7 @@ table {
     max-width: 90%;
     margin: 0 auto;
     padding: 20px;
-    background-color: white;
+    background-color: black; /* Change table background color to black */
     border: 1px solid lightslategray;
     border-radius: 5px;
 }
@@ -44,6 +46,7 @@ table {
 label {
     display: block;
     margin-bottom: 5px;
+    color: white; /* Set label text color to white */
 }
 
 input[type="text"], input[type="number"], textarea {
@@ -52,12 +55,13 @@ input[type="text"], input[type="number"], textarea {
     margin-bottom: 10px;
     border: 1px solid #cccccc;
     border-radius: 5px;
+    color: black; /* Set input text color to black */
 }
 
 input[type="submit"] {
     padding: 10px;
     background-color: #007bff;
-    color: #ffffff;
+    color: white; /* Set button text color to white */
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -71,7 +75,7 @@ button {
     padding: 8px;
     margin: 4px;
     background-color: #007bff;
-    color: #ffffff;
+    color: white; /* Set button text color to white */
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -85,7 +89,7 @@ a {
     padding: 8px;
     margin: 4px;
     background-color: #fdab13;
-    color: #ffffff;
+    color: white; /* Set link text color to white */
     border: none;
     border-radius: 5px;
     cursor: pointer;
