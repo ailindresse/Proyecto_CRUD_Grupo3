@@ -36,7 +36,7 @@ table {
     max-width: 90%;
     margin: 0 auto;
     padding: 20px;
-    background-color: white;
+    background-color: rgb(0, 0, 0);
     border: 1px solid lightslategray;
     border-radius: 5px;
     }
