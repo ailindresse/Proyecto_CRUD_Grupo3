@@ -1,52 +1,47 @@
- //const URL = "http://127.0.0.1:5000/";
+//const URL = "http://127.0.0.1:5000/"
 const URL = "https://codoacodogrupo3.pythonanywhere.com/"
 
 const app = Vue.createApp({
     data() {
         return {
             socios: []
-        };
+        }
     },
     methods: {
         obtenerSocios() {
             fetch(URL + 'socios')
                 .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Error al obtener los socios.');
-                    }
-                    return response.json();
+                    // Parseamos la respuesta JSON
+                    if (response.ok) { return response.json(); }
                 })
                 .then(data => {
+                    // El código Vue itera este elemento para generar la tabla
                     this.socios = data;
                 })
                 .catch(error => {
-                    console.error('Error:', error);
+                    console.log('Error:', error);
                     alert('Error al obtener los socios.');
                 });
         },
-        eliminarSocios(dni) {
+        eliminarSocio(dni) {
             if (confirm('¿Estás seguro de que quieres eliminar este socio?')) {
                 fetch(URL + `socios/${dni}`, { method: 'DELETE' })
                     .then(response => {
-                        if (!response.ok) {
-                            throw new Error(`Error al eliminar el socio: ${response.statusText}`);
+                        if (response.ok) {
+                            this.socios =
+this.socios.filter(socio => socio.dni !== dni);
+                            alert('Socio eliminado correctamente.');
                         }
-                        return response.json();
-                    })
-                    .then(data => {
-                        this.socios = this.socios.filter(socio => socio.dni !== dni);
-                        alert('Socio eliminado correctamente.');
                     })
                     .catch(error => {
-                        console.error('Error:', error);
                         alert(error.message);
                     });
             }
-        }
-    },
-    mounted() {
-        this.obtenerSocios();
+    }
+},
+mounted() {
+    //Al cargar la página, obtenemos la lista de socios
+    this.obtenerSocios();
     }
 });
-
 app.mount('body');
